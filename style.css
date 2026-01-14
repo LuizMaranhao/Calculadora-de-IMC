@@ -127,3 +127,132 @@ p {
         font-size: 1em;
     }
 }
+/* Importação de Fonte Google Fonts para um toque elegante */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:wght@700&display=swap');
+
+:root {
+    --background-color: #1a1a2e; /* Azul Marinho Escuro */
+    --card-background: #16213e; /* Um tom mais claro para o card */
+    --text-color: #e0e0e0; /* Cinza claro para o texto */
+    --accent-color: #ffd700; /* Dourado */
+    --button-hover: #ffec8b; /* Dourado mais claro para hover */
+    --border-color: #0f3460; /* Borda sutil */
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box; /* Garante que padding não adicione largura extra */
+}
+
+.container {
+    background-color: var(--card-background);
+    border-radius: 12px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+    border: 1px solid var(--border-color); /* Borda sutil */
+    transition: transform 0.3s ease-in-out; /* Animação suave */
+}
+
+.container:hover {
+    transform: translateY(-5px); /* Efeito de levantar no hover */
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    color: var(--accent-color);
+    margin-bottom: 30px;
+    font-size: 2.2em;
+    letter-spacing: 1px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 400;
+    color: var(--text-color);
+    text-align: left;
+}
+
+input[type="number"] {
+    width: calc(100% - 20px); /* Ajuste para padding */
+    padding: 12px 10px;
+    margin-bottom: 20px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background-color: #2c3a5e; /* Fundo do input mais escuro */
+    color: var(--text-color);
+    font-size: 1em;
+    outline: none; /* Remove borda azul ao focar */
+    transition: border-color 0.3s ease;
+}
+
+input[type="number"]::placeholder {
+    color: #929292;
+}
+
+input[type="number"]:focus {
+    border-color: var(--accent-color); /* Borda dourada ao focar */
+}
+
+button {
+    background-color: var(--accent-color);
+    color: var(--background-color); /* Texto escuro no botão dourado */
+    border: none;
+    border-radius: 8px;
+    padding: 14px 25px;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 15px;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 10px rgba(255, 215, 0, 0.3); /* Sombra dourada */
+}
+
+button:hover {
+    background-color: var(--button-hover);
+    transform: translateY(-2px); /* Efeito de "apertar" */
+}
+
+p {
+    margin-top: 25px;
+    font-size: 1.1em;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+#resultado {
+    color: var(--accent-color); /* IMC em dourado */
+    font-weight: 600;
+}
+
+#classificacao {
+    font-style: italic;
+    color: var(--text-color);
+    font-size: 1em;
+}
+
+/* Responsividade básica para telas menores */
+@media (max-width: 600px) {
+    .container {
+        padding: 30px 20px;
+    }
+    h1 {
+        font-size: 1.8em;
+    }
+    button {
+        padding: 12px 20px;
+        font-size: 1em;
+    }
+}
